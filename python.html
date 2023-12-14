@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
+</head>
+<body>
+   <py-script>
+    from collection import Counter
+
+    def nth_rarest_item(list,n) 
+    #count occurances of each integer
+    counts = Counter(list)
+    
+    #sort the unique integers by their occurrences
+    sorted_items = sorted(counts.items(),
+    key = lambda x: x[1])
+    
+    #find the nth rarest item
+    if n<=len(sorted_items):
+        return sorted_items[n-1][0]
+        else:
+            return None 
+            #return none if n exceeds the number of unique items
+   </py-script>
+</body>
+</html>
